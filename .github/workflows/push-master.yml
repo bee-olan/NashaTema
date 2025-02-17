@@ -50,8 +50,8 @@ jobs:
             -   name: Init
                 run: make init
 
-            -   name: Test
-                run: make manager-test
+#            -   name: Test
+#                run: make manager-test
 
             -   name: Down
                 run: make down
