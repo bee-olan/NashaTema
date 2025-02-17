@@ -1,0 +1,94 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Информация {% endblock %}
+
+{% block sidebarr %}
+    {{ include('app/proekts/personaa/side/_sideinform.html.twig') }}
+{% endblock %}
+{% block menuadapt %}
+    {{ include('app/proekts/personaa/side/_inclu-person.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <span class="aktiv">Инфа: ПерсонНомер</span>
+    <a href="{{ path('app.proekts.personaa.infa.infas') }}">Инфа: Все ПерсонНомера</a>
+    <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">Выбрать ПерсонНомер</a>
+    <a href="javascript:history.back()">Вернуться назад</a>
+ 
+{% endblock %}
+
+
+{% block bodyy %}
+
+    <div class="ma-to-1 ">
+
+        <!-- ================================== -->
+        <h2 class="storie-teni storie-teni--em34 ">
+             <span class="col-kras">От </span>
+            выбор <span class="col-kras">к </span> выбору.
+        </h2>
+
+        <ul   class=" li-he  storie-teni storie-teni--text-start  storie-teni--em32 ma-to-1" >
+
+           <li  >
+               <span class="col-kras">1. </span>     Выбрать диапазон
+           </li>
+
+           <li>
+               <span class="col-kras">2. </span>   Выбрать Номер 
+            </li>
+
+            <li >
+                <span class="col-kras">3. </span>   Сохранить или изменить
+            </li>
+
+
+            <li>
+                 <span class="col-kras">4. </span>    Смотреть результат и продолжить
+            </li>
+
+        </ul>
+
+    </div>
+
+    <h1 class="storie-teni storie-teni--text-start  storie-teni--em30  ma-to-2  li-he ">
+        <span class="col-kras">P.S. </span>
+        <p> Перейти по ссылке : </p>
+        <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}"> <span class="col-kras">Выбрать ПерсонНомер </span>  </a>
+    </h1>
+
+    <div class="storie-teni storie-teni--em34 ma-to-2 ma-bo-1">
+        Смотреть "Инфо-ролик"
+    </div>
+
+    <div class="base-container">
+        <article class="base-post">
+            <div class="base-post__header">
+                <div class="base-post__content">
+                    <h2 class="zagol-teni-44  ">
+                        <span class=" ma-bo-1 col-kras">- </span>
+                        <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
+                            <span class=" zagol-teni-32 ">ПерсонНомер </span>
+                        </a>
+                    </h2>
+                </div>
+                <div class="base-embed">
+                    <iframe width="720" height="405"
+                            src="https://rutube.ru/play/embed/59671f99a834e678a23dd24d3839016a/"
+                            frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen
+                            mozallowfullscreen allowFullScreen>
+
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="base-post__footer ">
+                <a class="post__read" href="#">оставить комментарий</a>
+            </div>
+        </article><!-- /.post -->
+    </div>
+
+
+
+
+{% endblock %}

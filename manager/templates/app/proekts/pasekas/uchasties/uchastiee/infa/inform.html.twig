@@ -1,0 +1,117 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Информация {% endblock %}
+
+{% block sidebarr %}
+    {{ include('app/proekts/personaa/side/_sideinform.html.twig') }}
+{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/pasekas/uchasties/uchastiee/infa/_inclu-menuadapt.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <span class="aktiv">Инфа:  Стать участником </span>
+    <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee.infa.infas') }}">Инфа: Все Участники</a>
+    <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee') }}">Стать участником</a>
+    <a href="javascript:history.back() " class="col-beloe">Вернуться назад. </a>
+{% endblock %}
+
+
+{% block bodyy %}
+
+    <div class="storie-teni storie-teni--em34 ma-to-2 ma-bo-1">
+         Инфо-ролик
+    </div>
+
+    <div class="base-container">
+        <article class="base-post">
+            <div class="base-post__header">
+                <div class="base-post__content">
+                    <h2 class="zagol-teni-44 zagol-teni-32 ">
+                        <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
+                            Допол. данные или всё
+                        </a>
+                    </h2>
+                </div>
+                <div class="base-embed">
+                    <iframe width="720" height="405"
+                            src="https://rutube.ru/play/embed/088549a660f5802c8426b6a3277b4f71/"
+                            frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen
+                            mozallowfullscreen allowFullScreen>
+
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="base-post__footer ">
+                <a class="post__read" href="#">оставить комментарий</a>
+            </div>
+        </article><!-- /.post -->
+    </div>
+
+{#    <div class="ma-to-1 ma-le-2">#}
+
+{#        <h2 class="zagol-teni-44 ">Все этапы на одной страничке  :</h2>#}
+
+
+
+{#       <ul class="mestoo__title">       #}
+{#            #}
+
+{#            <li class="mestoo__title-item ">#}
+{#                <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee') }}">#}
+{#                    <div class="foto uch-1"></div>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li class="zagol-teni-44  zagol-teni-44--px32">#}
+{#                    Для выбора #}
+{#                   <p> <span class="col-kras">ПерсонНомера и НомераМеста </span></p>#}
+{#                    можно воспользоваться <p>ссылками на этой страничке </p>#}
+{#               </li>#}
+{#       </ul>#}
+{#       <ul class="mestoo__title">#}
+{#            #}
+{#            <li class="zagol-teni-44  zagol-teni-44--px32">#}
+{#               Заполнение доп. данных  #}
+{#            </li>#}
+
+{#            <li class="mestoo__title-item ">             #}
+{#                    <div class="foto uch-2"></div>#}
+{#            </li>#}
+{#        </ul>#}
+{#        <ul class="mestoo__title">#}
+{#           #}
+{#            <li class="mestoo__title-item ">#}
+{#                    <div class="foto uch-3"></div>      #}
+{#            </li>#}
+{#             #}
+{#            <li class="zagol-teni-44  zagol-teni-44--px32">#}
+{#                 Выбираем название группы,#}
+{#                <p>заполняем Ник.</p> Всё -  сохранить. #}
+{#            </li>#}
+{#        </ul>#}
+{# #}
+{#        <ul class="mestoo__title">#}
+{#            #}
+{#            <li class="zagol-teni-44  zagol-teni-44--px32">#}
+{#                  <span class="col-kras">Ура!!! </span>#}
+{#               <p> Вы стали Участником проекта</p>#}
+{#            </li>#}
+
+{#            <li class="mestoo__title-item ">#}
+{#                <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee') }}">#}
+{#                    <div class="foto uch-4"></div>#}
+{#                </a>#}
+{#            </li>#}
+{#        </ul>#}
+
+{#    </div>#}
+{#    <div class="ma-to-4">#}
+{#        <h1 class="zagol-teni-44  zagol-teni-44--px32  ma-to-2">#}
+{#            <span class="col-kras">P.S. </span>  Теперь на главной страничке читаем #}
+{#        </h1>#}
+{#            <div class="foto uch-5"></div>#}
+{#   </div>   #}
+    
+{% endblock %}

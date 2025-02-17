@@ -1,0 +1,89 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Участие{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/personaa/side/_inclu-person.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.uchastieGl') }}">Инфа: Стать участником</a>
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа:  ПерсонНомер</a>
+    <a href="{{ path('app.proekts.mestos.infa.inform') }}">Инфа: Место рас-ния</a>
+    <span class="aktiv">Обсудить: Место </span>
+{% endblock %}
+
+{% block bodyy %}
+
+<article class="base-post ">
+    <div class="base-post__actions">
+        <a href="#">вернуться назад</a>
+    </div>
+
+
+
+    <div class="base-post__content">
+
+        <h3 class="base-post__subtitle">Обсуждение</h3>
+
+        <form class="form-post" action="./app/proekts/page_glavas/uchastieGl/obsudims/postmesto.html.twig" method="post">
+            <div class="form-post__group">
+                <textarea class="form-post__control  form-post__control--textarea" name="comment-text"
+                          placeholder="Текст комментария" data-autoresize>
+
+                </textarea>
+                <span class="form-post__line"></span>
+            </div>
+            <button class="btnn btnn-mesto" type="submit">Отправить</button>
+        </form>
+
+        <ul class="post-comments">
+            <li class="post-comments__item">
+                <div class="post-comments__header">
+                    <img class="post-comments__avatar" src="https://placehold.it/30" alt="">
+
+                    <div class="post-comments__author">
+                        <div class="post-comments__name">Дмитрий Валак</div>
+                        <time class="post-comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                    </div>
+                </div>
+
+                <div class="post-comments__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, suscipit accusantium aut culpa eius esse architecto nobis sit excepturi expedita, repellendus quae praesentium rerum earum molestias ullam a doloribus at.</div>
+                <button class="post-comments__reply" type="button">ответить</button>
+
+                <ul class="post-comments">
+                    <li class="post-comments__item">
+                        <div class="post-comments__header">
+                            <img class="post-comments__avatar" src="https://placehold.it/30" alt="">
+
+                            <div class="post-comments__author">
+                                <div class="post-comments__name">Дмитрий Валак</div>
+                                <time class="post-comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                            </div>
+                        </div>
+
+                        <div class="post-comments__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, suscipit accusantium aut culpa eius esse architecto nobis sit excepturi expedita, repellendus quae praesentium rerum earum molestias ullam a doloribus at.</div>
+                        <button class="post-comments__reply" type="button">ответить</button>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="post-comments__item">
+                <div class="post-comments__header">
+                    <img class="post-comments__avatar" src="https://placehold.it/30" alt="">
+
+                    <div class="post-comments__author">
+                        <div class="post-comments__name">Дмитрий Валак</div>
+                        <time class="post-comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                    </div>
+                </div>
+
+                <div class="post-comments__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, suscipit accusantium aut culpa eius esse architecto nobis sit excepturi expedita, repellendus quae praesentium rerum earum molestias ullam a doloribus at.</div>
+                <button class="post-comments__reply" type="button">ответить</button>
+            </li>
+        </ul>
+
+    </div><!-- /.post__content -->
+</article><!-- /.post -->
+
+{% endblock %}

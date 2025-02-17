@@ -1,0 +1,130 @@
+<header class="header  ">
+    <div class="header__left-reg">
+        <nav class="nav ">
+            <div class="nav__link  ">
+               <h1 class="  nav-teni">Региональный тест маток</h1>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="header__left">
+        <button class="burger " type="button" id="sidebarToggle" >
+            <span>Открыть навигацию</span>
+        </button>
+        <div class="header__left-glav"  >
+             <a class="  nav-teni"  href="{{ path('proekt') }}" >Главная </a>
+        </div>
+        <nav class="nav ">
+            <ul class="nav__list ">
+                <li class="nav__item">
+
+                    <a class="nav__link has-subnav  nav-teni" href="{{ path('proekt') }}" > Главная </a>
+                    <ul class="subnav">
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.page_glavas.uchastieGl') }}">
+                                Главная
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Участие
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.mestos.okrugs') }}">
+                                Номер Места
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
+                                Персон Номер
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">
+                                Список участников
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link has-subnav  nav-teni" href="#">Матки </a>
+                    <ul class="subnav">
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Елит - Матки
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Бренд - Матки
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Пчело - Матки
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link has-subnav  nav-teni" href="#">Дочки </a>
+                    <ul class="subnav">
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Дочь - Елит
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Дочь - Бренд
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav__link" href="{{ path('app.proekts.pasekas.uchasties.basepro') }}">
+                                Дочь - Пчело
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link has-subnav  nav-teni" href="#">Пасека </a>
+                    <ul class="subnav">
+                        <li>На модерации</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <!-- <div class="header__left-glav">
+        <nav class="nav ">
+            <div class="nav__link  ">
+             <a class="nav__link   nav-teni" href="proekt" >Главная </a>
+            </div>
+        </nav>
+    </div> -->
+
+    <div class="header__right  ">
+        <nav class="nav  ">
+            <ul class="nav__list  nav-teni">
+                {#                <li class="nav__item  header-right-bor ">#}
+                {#                    <a class="nav__link col-beloe" href="#">Профиль</a>#}
+                {#                </li>#}
+                <li class="nav__item ">
+                    <a class="nav__link" href="#">Войти</a>
+                </li>
+            </ul>
+        </nav>
+        <form class="search" action="search.html" method="get">
+            <input class="search__input" type="text" placeholder="Поиск">
+{#            <div class="lupaimg"></div> по сайту#}
+       </form>
+    </div>
+</header>

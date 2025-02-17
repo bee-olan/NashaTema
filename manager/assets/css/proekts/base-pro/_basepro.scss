@@ -1,0 +1,88 @@
+.base-container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @include breakpoint($mobile-bp) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.base-post {
+  margin-bottom: 3rem;
+  padding: 1rem 2.5rem ;
+  overflow: hidden;
+
+  background-color: $transpar;
+  box-shadow: 0 15px 25px rgba($black, .35);
+  border-radius: 5px;
+
+  @include breakpoint($mobile-bp) {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+.base-post__header {
+  margin: 0 0 2.5rem;
+
+  &--preview {
+    margin: -2.5rem -2.5rem 2.5rem;
+  }
+}
+
+.base-embed,
+.base-fr-video {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  iframe,
+  video,
+  object,
+  embed {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.base-post__content {
+  margin-bottom: 1rem;
+
+}
+
+.base-post__subtitle {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  font-size: 1.6rem;
+  color: $white;
+  font-weight: 500;
+}
+
+.base-post__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint($mobile-bp) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.base-post__preview {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,61 @@
+.mainn {
+    padding: 4.2rem 0 8rem $sidebarr-width;
+
+    @include breakpoint($bp-990) {
+         //padding-top: 6rem;
+        padding-left: 0;
+    }
+
+}
+
+.main-pro {
+    display: none;
+    padding: 0;
+    
+    @include breakpoint($tablet-bp) {
+        display: block;
+    }
+}
+.main-pro-1 {
+    @include breakpoint($tablet-bp) {
+        display: none;
+    }
+    padding: 0;
+}
+.main-pro-2 {
+    padding: 0;
+
+    @include breakpoint($bp-768) {
+        display: none;
+    }
+}
+
+.main-pro-pro {
+    display: none;
+    padding: 0;
+    
+    @include breakpoint($bp-768) {
+        display: block;
+    }
+}
+
+.net-ego {
+    @include breakpoint($mobile-bp) {
+        display: none;
+    }
+}
+
+.text1,
+// .text2,
+.foto1 {
+    @include breakpoint($bp-768) {
+        display: none;
+    }
+}
+
+.text-es {
+    display: none;
+    @include breakpoint($bp-768) {
+        display: block;
+    }
+}

@@ -1,0 +1,32 @@
+.video {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    overflow: hidden;
+
+    background-color: $primary;
+    box-shadow: 0 15px 25px rgba($black, .35);
+    border-radius: 5px;
+}
+
+.video__header {
+    margin: -2.5rem -2.5rem 2.5rem;
+
+    &--vid {
+        margin: 0 0 2.5rem;
+    }
+}
+
+.video__preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+

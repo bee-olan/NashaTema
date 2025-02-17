@@ -1,0 +1,82 @@
+<!-- Stories -->
+<h2 class="zagol-teni-44 zagol-teni-32 ma-bo-2">В любой последовательности  переходим на странички ::</h2>
+
+<div class="container-stor">
+    <div class="stories-stor">
+        <div class="stories__item">
+            <div class="stories__preview">
+                <div class="stor-uch-1"></div>
+            </div>
+            <div class="stories__title ">
+                <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
+                    <span class=" storie-teni storie-teni--em30 "> ПерсонНомер </span>
+                </a>
+            </div>
+
+            <time class="stories__date storie-teni storie-teni--em30 ">
+                {% if persona %}
+                    <a href="{{ path('app.proekts.personaa.infa.infas') }}">
+                        пн-{{ persona.nomer }}
+                    </a>
+                {% else %}
+                    Участие
+                {% endif %}
+            </time>
+
+        </div>
+
+        <div class="stories__item">
+            <div class="stories__preview">
+                <div class="stor-uch-2"></div>
+            </div>
+            <div class="stories__title">
+                <a href="{{ path('app.proekts.mestos.okrugs') }}">
+                    <span class=" storie-teni storie-teni--em30 "> НомерМеста  </span>
+                </a>
+            </div>
+            <time class="stories__date storie-teni storie-teni--em30 ">
+                {% if mestoNomer %}
+                    <a href="{{ path('app.proekts.mestos.infa.infas') }}">
+                        {{ mestoNomer.nomer }}
+                    </a>
+                {% else %}
+                    Участие
+                {% endif %}
+            </time>
+        </div>
+
+        <div class="stories__item">
+            <div class="stories__preview">
+                <div class="stor-uch-3"></div>
+            </div>
+            <div class="stories__title">
+                <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee') }}">
+                    <span class=" storie-teni storie-teni--em30 "> Стать участником  </span>
+                </a>
+            </div>
+            <time class="stories__date storie-teni storie-teni--em30 ">
+                {% if uchastie %}
+                    <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee.infa.infas') }}">
+                        {{ uchastie.nike }}
+                    </a>
+                {% else %}
+                    Участие
+                {% endif %}
+            </time>
+        </div>
+
+        <div class="stories__item">
+            <div class="stories__preview">
+                <div class="stor-uch-4"></div>
+            </div>
+
+            <div class="stories__title">
+                <a href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">
+                    <span class=" storie-teni storie-teni--em30 "> Список - группы  </span>
+                </a>
+            </div>
+
+            <time class="stories__date storie-teni storie-teni--em30 ">Участие</time>
+        </div>
+    </div><!-- /.stories -->
+</div>

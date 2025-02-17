@@ -1,0 +1,40 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}{{ oblast.name }}{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/personaa/side/_inclu-person.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <span class="aktiv ">Участие</span>
+    <a href="{{ path('app.proekts.mestos.okrugs') }}">Место</a>
+    {#    <a href="{{ path('app.proekts.mestos.inform') }}">Информация</a>#}
+{#    <a href="{{ path('app.proekts.mestos.okrugs', {'okrug_id': okrug.id} ) }}">Номера Округов</a>#}
+    <a href="javascript:history.back()">Вернуться назад</a>
+    <span class="aktiv">Редактиовать</span>
+{% endblock %}
+
+{% block bodyy %}
+
+    <h1 class="mt-0 mb-3 font-xl">
+        {# {% if childmatka.parent %}
+            <a href="{{ path('work.projects.childmatkas.show', {'id': childmatka.parent.id}) }}">{{ childmatka.parent.name }}</a> /
+        {% endif %} #}
+        {{ oblast.name }}
+    </h1>
+
+    <div class="card">
+        <div class="card-body">
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div>
+                <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            </div>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+
+{% endblock %}

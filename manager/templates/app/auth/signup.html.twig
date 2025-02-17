@@ -1,0 +1,66 @@
+{% extends 'auth.html.twig' %}
+
+{% block title %}Регистрация{% endblock %}
+
+  {% block zagol %}
+        <div class="zagol zagol-bg-primary">
+                <h1 class="zagol-teni  zagol-teni--em4"> Рег - Те - Ма</h1>
+        </div>
+    {% endblock %}
+
+{% block body %}
+   
+        <div class="row justify-content-center ">
+            <div class="col-md-6">
+                <div class="card mx-4">
+                     <div class="zagol-container ">
+                    <div class="card-body p-4">
+                        {% include '_flashes.html.twig' %}
+
+                        <h1 class="zagol-teni-44 ma-bo-2">Регистрация</h1>
+
+                        {{ form_start(form) }}
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="icon-user"></i></span>
+                            </div>
+                            {{ form_widget(form.firstName, {'attr': {'placeholder': 'Имя'}}) }}
+                            {{ form_errors(form.firstName) }}
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="icon-user"></i></span>
+                            </div>
+                            {{ form_widget(form.lastName, {'attr': {'placeholder': 'Фамилия'}}) }}
+                            {{ form_errors(form.lastName) }}
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            {{ form_widget(form.email, {'attr': {'placeholder': 'Email'}}) }}
+                            {{ form_errors(form.email) }}
+                        </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-lock"></i>
+                                </span>
+                            </div>
+                            {{ form_widget(form.password, {'attr': {'placeholder': 'Пароль'}}) }}
+                            {{ form_errors(form.password) }}
+                        </div>
+
+                        <button type="submit" class="btnn btnn-log ">
+                              <span class=" zagol-teni  zagol-teni--px30 "> Создать учетную запись </span>
+                        </button>
+
+                        {{ form_end(form) }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+   </div>
+{% endblock %}

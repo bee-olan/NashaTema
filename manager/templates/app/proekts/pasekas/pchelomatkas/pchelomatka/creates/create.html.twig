@@ -1,0 +1,65 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+{% block sidebarr %}
+    {% include('app/proekts/pasekas/pchelomatkas/side/_sidecreate.html.twig') %}
+{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Инфа: регистрация матки
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">Инфа:  регистрация матки.</a>
+
+    <span class="aktiv ">Заполняем  позиции.</span>
+
+{% endblock %}
+
+{% block bodyy %}
+
+    <div class=" proekts pro-pchelomat">
+
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Регистрация Пчело-Матки &nbsp; &nbsp;
+            </div>
+        </div>
+        <div class="proekts-plr  ">
+
+            <h1 class="pchelo-titul   ">Заполняем позиции: :</h1>
+
+            <div class="matki-form__header  ">
+                <div class="matki-form ">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <ul class="plem__data plem__data--mt2">
+                        <li>
+                            <button type="submit" class="btnn btnn-pchel fo-si">Добавить в БД</button>
+                        </li>
+                    </ul>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" proekts ">
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Характеристики категорий для регистрации Пчело-Матки&nbsp;
+            </div>
+        </div>
+
+        {% include('app/proekts/pasekas/pchelomatkas/kategoris/_kategor-includ.html.twig') %}
+    </div>
+
+{% endblock %}

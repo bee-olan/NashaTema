@@ -1,0 +1,107 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Инфа:  регистрация
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka') }}"> Выбор инфы..</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией.</a>
+    <span class="aktiv ">Инфа:  регистрация матки.</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+
+
+{% endblock %}
+
+{% block bodyy %}
+
+
+    <div class=" pa-to-2  ">
+
+        <div class=" ma-bo-2  zagol-teni-44   zagol-teni-34 col-bel-text">
+            Инфа: <span class="col-kras">Регистрация </span> Пчело-Матки
+        </div>
+
+        <ul   class=" li-he  zagol-teni-44 storie-teni--text-start  zagol-teni-32 ma-to-1 col-bel-text" >
+
+            <li  >
+                <span class="col-kras">1. </span>     Комментарий - можно не заполнять
+            </li>
+
+            <li>
+                <span class="col-kras">2. </span>    Номер матки - натуральное число
+            </li>
+
+            <li >
+                <span class="col-kras">3. </span>    Дата выхода - можно выбрать или набрать
+            </li>
+
+
+            <li>
+                <span class="col-kras">4. </span>    Выбор расы - только для <span class="col-kras"> бр, бр/.. </span>
+            </li>
+
+            <li >
+                <span class="col-kras"> 5. </span>
+                Категория - хар-ки категорий внизу страницы
+            </li>
+
+            <li >
+                <span class="col-kras"> 6. </span>
+                Не забыть -
+                <span class="col-kras"> Добавить в БД </span>
+            </li>
+
+            <li class="ma-bo-2">
+                <a class="btnn btnn-pchel"
+                   href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create') }}">
+                    перейти к регистрации
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="storie-teni storie-teni--em34 ma-to-2 ma-bo-1">
+            Смотреть "Инфо-ролик"
+        </div>
+
+        <div class="base-container">
+            <article class="base-post">
+                <div class="base-post__header">
+                    <div class="base-post__content">
+                        <h2 class="zagol-teni-44 zagol-teni-32 ">
+                            Регистрация Пчело - Матки
+                            {#                            <span class="  "> </span>#}
+                        </h2>
+                    </div>
+                    <div class="base-embed">
+                        <iframe width="720" height="405" src="https://rutube.ru/play/embed/6f090c1f8ea755d37a1fcf22bb292d4a/"
+                                frameBorder="0" allow="clipboard-write; autoplay"
+                                webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="base-post__footer ">
+                    <a class="post__read" href="#">оставить комментарий</a>
+                </div>
+            </article><!-- /.post -->
+        </div>
+
+        <h1 class="zagol-teni-44 zagol-teni-32 col-bel-text ma-to-2 ma-bo-2 ">
+            <span class="col-kras">P.S. </span>
+            Возникут вопросы во время регистрации:   на страничке слева - выпадающее меню.
+        </h1>
+
+
+    </div>
+{% endblock %}

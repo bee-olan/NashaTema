@@ -1,0 +1,48 @@
+.form-post__group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-post__control {
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid #3F3F3F;
+    border-radius: 0;
+    box-shadow: none;
+
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: $white;
+
+    &::placeholder {
+        color: rgba($white, .2);
+    }
+
+    &:focus + .form-post__line {
+        width: 100%;
+    }
+
+    &--textarea {
+        height: 30px;
+        overflow: hidden;
+        resize: none;
+    }
+}
+
+.form-post__line {
+    width: 0;
+    height: 1px;
+
+    background-color: $blue;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    transition: width .2s linear;
+}

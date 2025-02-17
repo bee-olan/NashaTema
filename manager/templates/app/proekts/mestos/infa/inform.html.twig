@@ -1,0 +1,96 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Информация {% endblock %}
+
+    {% block sidebarr %}
+        {{ include('/app/proekts/mestos/side/_sideinform.html.twig') }}
+    {% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/mestos/infa/_inclu-menuadapt.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <span class="aktiv">Инфа: НомерМеста</span>
+    <a href="{{ path('app.proekts.mestos.infa.infas') }}">Инфа: Все НомераМест</a>
+    <a href="{{ path('app.proekts.mestos.okrugs') }}">Начало - выбрать Округ</a>
+    <a href="javascript:history.back()">Вернуться назад</a>
+{% endblock %}
+
+
+{% block bodyy %}
+
+    <div class="ma-to-1 base-container">
+
+        <h2 class="storie-teni storie-teni--em34 ">
+            <span class="col-kras">От </span>
+            выбор <span class="col-kras">к </span> выбору.
+        </h2>
+
+        <ul   class=" li-he  storie-teni storie-teni--text-start  storie-teni--em32 ma-to-1" >
+
+            <li  >
+                <span class="col-kras">1. </span>     Выбрать округ
+            </li>
+
+            <li>
+                <span class="col-kras">2. </span>   Республика / Край / Область
+            </li>
+
+            <li >
+                <span class="col-kras">3. </span>   Если нет нужного названия - написать запрос можно на страничках:
+                "Республика / Край / Область" и "Район"
+            </li>
+
+
+            <li>
+                <span class="col-kras">4. </span>   Выбрать район
+            </li>
+
+
+            <li>
+                <span class="col-kras">5. </span>   Проверить и сохранить
+            </li>
+
+
+        </ul>
+
+    <h1 class="storie-teni storie-teni--text-start  storie-teni--em30  ma-to-2  li-he ">
+        <span class="col-kras">P.S. </span>
+        <p> Перейти по ссылке : </p>
+        <a href="{{ path('app.proekts.mestos.okrugs') }}"> <span class="col-kras">Выбрать Номер Места </span>  </a>
+    </h1>
+
+    <div class="storie-teni storie-teni--em34 ma-to-2 ma-bo-1">
+        Смотреть "Инфо-ролик"
+    </div>
+
+    <div class="base-container">
+        <article class="base-post">
+            <div class="base-post__header">
+                <div class="base-post__content">
+                    <h2 class="zagol-teni-44 zagol-teni-32 ">
+                        Номер Места
+{#                            <span class="  "> </span>#}
+                    </h2>
+                </div>
+                <div class="base-embed">
+                    <iframe width="720" height="405"
+                            src="https://rutube.ru/play/embed/81182cfa0c3fa2b14662c9256368efed/"
+                            frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen
+                            mozallowfullscreen allowFullScreen>
+
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="base-post__footer ">
+                <a class="post__read" href="#">оставить комментарий</a>
+            </div>
+        </article><!-- /.post -->
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  width: calc(100% - #{$sidebarr-width});
+
+  background: linear-gradient($grad1, $grad2);
+  box-shadow: 0 5px 10px rgba($primary-modal, .2);
+  border-left: 2px solid $grad2-o;
+  border-top: 2px solid $grad2-o;
+
+  position: fixed;
+  top: 0;
+
+  right: 0;
+  z-index: $z-index-header;
+
+  @include breakpoint($bp-990) {
+    width: 100%;
+  }
+
+
+  // @media(max-width: 768px) {
+  //   .header {
+  //     width: 100%;
+  //     margin-top: 3rem;
+  //   }
+  // }
+}
+
+.header__left {
+  display: none;
+  width: 80%;
+  line-height: 1.4 ;
+
+  @include breakpoint($tablet-bp) {
+    display: block;
+  }
+
+  // @include breakpoint($bp-768) {
+  //   display: flex;
+  //   width: 30%;
+  // }
+}
+
+.header__left-reg {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  line-height: 1.4 ;
+  word-spacing: 1em;
+  z-index: $z-index-modal;
+
+  @include breakpoint($tablet-bp) {
+    display: none;
+  }
+
+  @include breakpoint($bp-768) {
+    display: none;
+   
+  }
+}
+
+.header__left-glav {
+  display: none; 
+  
+  @include breakpoint($bp-768) {
+
+    display: flex;
+    margin-left: 8rem;
+
+  }
+}
+
+.header__right {
+  width: 20%;
+  display: flex; // оба эл-ты в header__right -в линию
+  justify-content: flex-end; // прижали к правой стороне
+  // margin-right: 1rem;
+
+  // @include breakpoint($bp-768) {
+  //   width: 70%;
+  // }
+}
+
+.header-right-bor {
+  color: $border-linia-nav ;
+  border: 2px solid $border-linia-nav ;
+  }
+

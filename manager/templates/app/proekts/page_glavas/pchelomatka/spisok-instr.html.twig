@@ -1,0 +1,119 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Инфа:  после
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka') }}"> Выбор инфы..</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}"> Инфа: перед регистрацией.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">Инфа: регистрация матки.</a>
+    <span class="aktiv ">Инфа: после регистрации.</span>
+{% endblock %}
+
+{% block bodyy %}
+    <div class=" pa-to-2  ">
+
+        <div class=" ma-bo-2 zagol-teni-44 zagol-teni-34 col-bel-text">
+            Инфа: <p><span class="col-kras">после </span> регистрации. </p>&nbsp;
+        </div>
+
+        <div class="proekts-plr  ">
+
+            <ul class="mestoo__title ">
+                <li class="zagol-teni-44  zagol-teni-32 col-bel-text ">
+                    <span class="col-kras"> Все </span>
+                    переходы для работы с конкретной маткой
+                    возможны со странички: <span class="col-kras"> Список</span>
+
+                    <p class="ma-to-1">
+                        <a class="btnn btnn-filtr"
+                           href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">
+                            Список
+                        </a>
+                    </p>
+                </li>
+
+{#                <li class="mestoo__title-item ">#}
+{#                    <div class="foto-pchelo pchelo-spisok-wse"></div>#}
+{#                </li>#}
+            </ul>
+
+
+            <div class="ma-to-2">
+                <ul class="mestoo__title">
+                    <li class="mestoo__title-item ">
+                        <div class="drevimg "></div>
+                    </li>
+                    <li class="zagol-teni-44  zagol-teni-32 col-bel-text pa-le-2">
+                        - переход к работе с конкретной маткой
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="ma-to-2">
+                <ul class="mestoo__title">
+                    <li class="mestoo__title-item ">
+                        <div class="matimg "></div>
+                    </li>
+                    <li class="zagol-teni-44  zagol-teni-32 col-bel-text pa-le-2">
+                        - объявление Дочь - Пчело
+                    </li>
+
+                </ul>
+            </div>
+            <div class="ma-to-2">
+                <ul class="mestoo__title">
+                    <li class="zagol-teni-44  zagol-teni-32 col-bel-text ">
+                        Расшифровка сокращений в названии Пчело - Матки
+                    </li>
+
+{#                    <li class="mestoo__title-item ">#}
+{#                        <div class="foto-pchelo pchelo-shifr"></div>#}
+{#                    </li>#}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ma-bo-2 ">
+        <ul class="mestoo__title">
+            <li class="zagol-teni-44  zagol-teni-32 col-bel-text ">
+                Если все получится - будет так
+                <span class="col-kras"> -->></span>
+
+
+                <p class="ma-to-1">
+                    На этой страничке рабочие
+                    ссылки:
+                </p>
+
+                <div class="ma-to-1 ma-bo-2">
+                    <p><span class="col-kras">1) </span>
+                        Добавить 3-и сезона</p>
+                </div>
+                <div class="ma-bo-2">
+                    <p><span class="col-kras">2) </span>
+                        Смотреть шифровку</p>
+                </div>
+                <div class="ma-bo-2">
+
+                    <p><span class="col-kras">3) </span>
+                        Список Ваших Пчело - Маток</p>
+                </div>
+
+            </li>
+            {#                #}
+        </ul>
+    </div>
+{% endblock %}

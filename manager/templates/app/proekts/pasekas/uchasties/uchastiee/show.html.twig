@@ -1,0 +1,63 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Участники{% endblock %}
+{% block menuadapt %}
+    {{ include('app/proekts/pasekas/uchasties/spisok/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Данные о работе
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.pasekas.uchasties.groupas') }}">Группы</a>
+    <a href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">Список </a>
+    <span class="aktiv">Работа участника</span>
+    <a href="javascript:history.back() " class="col-beloe">Вернуться назад. </a>
+{% endblock %}
+
+{% block bodyy %}
+
+    <div class="proekts pro-mesto">
+
+        <div class="wstavka wstavka--uch">
+            <div class="wstavka__title">
+                Участник
+                <span class="st-plem__kras">{{ uchastie.nike }}</span>
+
+            </div>
+        </div>
+
+        <table class="tabl  ">
+            <tbody>
+            <tr class="uch-color">
+
+                <th>Имя</th>
+
+                <th>Ник</th>
+{#                <th>Email</th>#}
+
+                <th>Группа</th>
+
+                <th>Статус</th>
+
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>{{ uchastie.name.full }}</td>
+
+                <td>{{ uchastie.nike }}</td>
+
+{#                <td>{{ uchastie.email.value }}</td>#}
+
+                <td>{{ uchastie.group.name }}</td>
+
+                <td>{{ uchastie_status(uchastie.status.name) }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

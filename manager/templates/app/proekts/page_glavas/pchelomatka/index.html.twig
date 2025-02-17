@@ -1,0 +1,56 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Общая инфа
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    <span class="aktiv ">Выбор инфы.</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">Инфа: регистрация матки.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+
+{% endblock %}
+
+{% block bodyy %}
+    <div class="ma-le-1">
+        <div class="ma-bo-2 pa-to-2 ">
+            <h2 class="storie-teni storie-teni--em34 ">
+                Основные <span class="col-kras">моменты </span> в работе
+            </h2>
+        </div>
+
+        <div class="ma-bo-2">
+            <div class="ma-bo-1">
+            <span class="storie-teni storie-teni--em32 ">
+                <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">
+                 1)   <span class="col-kras">Перед </span>   регистрацией.
+                 </a>
+            </span>
+            </div>
+            <div class="ma-bo-1">
+            <span class="storie-teni storie-teni--em32">
+                <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">
+                  2)  <span class="col-kras">Регистрация</span>   матки.
+                </a>
+            </span>
+            </div>
+            <div>
+            <span class="storie-teni storie-teni--em32">
+                <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">
+                  3)  <span class="col-kras">После </span>  регистрации.
+                </a>
+            </span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

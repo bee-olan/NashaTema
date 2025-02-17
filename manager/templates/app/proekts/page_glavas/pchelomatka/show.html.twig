@@ -1,0 +1,96 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Инфа: перед
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka') }}"> Выбор инфы.</a>
+    <span class="aktiv ">Инфа: перед регистрацией.</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">Инфа: регистрация матки.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+{% endblock %}
+
+{% block bodyy %}
+
+    <div class=" pa-to-1  ">
+        <div class=" ma-bo-2 zagol-teni-44   zagol-teni-34 col-bel-text">
+            Инфа: <span class="col-kras">перед </span> регистрацией&nbsp;
+        </div>
+
+        <div class="proekts-plr  ">
+
+                <ul   class="  zagol-teni-44   zagol-teni-32 storie-teni--text-start   ma-to-1 col-bel-text" >
+
+                    <li  >
+                        <span class="col-kras">1. </span>     Обязательно определитесь с
+                        <span class="col-kras"> категориями.</span>
+                        <p class="ma-bo-1">
+                            Возможно у Вас свои представления о названиях
+                            категорий и их <span class="col-kras">характеристиках. </span>
+                        </p>
+                        Пишите, обсудим и добавим.
+                        <p class="ma-to-1">
+                            <a class="btnn btnn-pchel"
+                               href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">
+                                Категории
+                            </a>
+                        </p>
+                    </li>
+
+                    <li class="ma-to-2">
+                        <span class="col-kras">2. </span>    Пожалуйста,  проверьте наличие нужного названия
+                        <span class="col-kras"> расы.</span>
+                        <p > В списке нет -</p>
+
+                        <span class="col-kras">напишите запрос. </span>
+                        <p class="ma-to-1">
+                            Добавим  название в БД.
+                        </p>
+                        <p class="ma-to-1">
+                            <a class="btnn btnn-pchel  "
+                               href="{{ path('app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo') }}">
+                                Расы
+                            </a>
+                        </p>
+                    </li>
+
+                </ul>
+
+            <div class="storie-teni storie-teni--em34 ma-to-2 ma-bo-1">
+                Смотреть "Инфо-ролик"
+            </div>
+
+            <div class="base-container">
+                <article class="base-post">
+                    <div class="base-post__header">
+                        <div class="base-post__content">
+                            <h2 class="zagol-teni-44 zagol-teni-32 ">
+                                Перед регистрацией Пчело - Матки
+                                {#                            <span class="  "> </span>#}
+                            </h2>
+                        </div>
+                        <div class="base-embed">
+                            <iframe width="720" height="405" src="https://rutube.ru/play/embed/f1db2eb5685eddaca1e895778f378f77/"
+                                    frameBorder="0" allow="clipboard-write;
+                                    autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="base-post__footer ">
+                        <a class="post__read" href="#">оставить комментарий</a>
+                    </div>
+                </article><!-- /.post -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

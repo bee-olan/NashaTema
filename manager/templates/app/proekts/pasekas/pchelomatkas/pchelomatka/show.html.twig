@@ -1,0 +1,160 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Расшифровка{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Инфа: после
+        </div>
+    </div>
+{% endblock %}
+
+    {% block kroxii %}
+        <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+        <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Список </a>
+        <span class="aktiv ">Расшифровка  названий</span>
+        <a href="javascript:history.back() " class="col-beloe">Вернуться назад. </a>
+    {% endblock %}
+
+{% block bodyy %}
+
+    <div class=" proekts pro-pchelomat">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Расшифровка сокращенных названий
+            </div>
+        </div>
+
+
+        <div class="proekts-plr">
+            <div class="ma-bo-1">
+                <div class="pchelo-titul  ">
+                    <span class="strongo  strongo--kras">{{ infaPchelo.name }}  </span> -- сокращенное название Пчело - Матки
+                </div>
+            </div>
+
+            <ul class="pchelo pchelo__jus-st ">
+            <li class="mat-shifr-li">{{ infaPchelo.rasaname }}</li>
+                <li class="mat-shifr">
+                    <span class="strongo "> Раса : &nbsp; &nbsp;  </span>{{ infaPchelo.rasa }}
+                </li>
+            </ul>
+
+            <ul class="pchelo pchelo__jus-st">
+                <li class="mat-shifr-li">
+                    <span class="strongo  strongo--kras">{{ infaPchelo.sort }} </span>
+                </li>
+                <li class="mat-shifr">
+                    нумерация - создается программно, отдельно для каждой расы
+                </li>
+            </ul>
+
+            <ul class="pchelo pchelo__jus-st ">
+                <li class="mat-shifr-li">{{ infaPchelo.kategoria }}</li>
+                <li class="mat-shifr"> Катеория -- пояснения внизу этой странички</li>
+            </ul>
+
+            <ul class="pchelo pchelo__jus-st">
+                <li class="mat-shifr-li">{{ infaPchelo.nomer }}</li>
+                <li class="mat-shifr">
+                    <strong class="strongo "> Место пасеки : &nbsp; &nbsp; </strong>
+                    {{ infaPchelo.okrug }} -
+                    {{ infaPchelo.oblast }}
+                    - {{ infaPchelo.raion }}
+                </li>
+            </ul>
+
+            <ul class="pchelo pchelo__jus-st ">
+                <li class="mat-shifr-li">пн-{{ infaPchelo.persona }} </li>
+                <li class="mat-shifr"> Персональный номер матковода&nbsp; &nbsp;</li>
+            </ul>
+
+            <ul class="pchelo pchelo__jus-st ">
+                <li class="mat-shifr-li">{{ infaPchelo.title }}</li>
+                <li class="mat-shifr"> Номер - год выхода матка</li>
+            </ul>
+
+            <ul class="pchelo pchelo__jus-st">
+                <li class="mat-shifr-li">{{ plemmatka_status(infaPchelo.status) }}  </li>
+                <li class="mat-shifr">-- статус ПлемМатки на данный момент</li>
+            </ul>
+            {#            <ul class="plem plem__jus-st">#}
+            {#                <li class="plem__name plem__name--wid20"></li>#}
+            {#                <li class="plem__name plem__name--wid20"></li>#}
+            {#            </ul>#}
+            {#            <h1 class="plem__title  ">Данные о трутнях</h1>#}
+            {#            {% if  plemmatka.otecNomer.linia.name %}#}
+            {#                <ul class="plem plem__jus-st ">#}
+            {#                    <li class="plem__name plem-nomer">{{ otecNomer.linia.name }}</li>#}
+            {#                    <li class="plem__name plem__name--wid20"><strong class="strongo strongo--kras"> отцовская#}
+            {#                            линия </strong></li>#}
+            {#                </ul>#}
+            {#                <ul class="plem plem__jus-st ">#}
+            {#                    <li class="plem__name plem-nomer">{{ otecNomer.name }}</li>#}
+            {#                    <li class="plem__name plem__name--wid20"><strong class="strongo strongo--kras"> номер#}
+            {#                            материнки</strong></li>#}
+            {#                    <li>#}
+            {#                        <ul class="plem plem__jus-st ">#}
+            {#                            <li class=" plem__name--wid20">#}
+            {#                                <strong class="strongo "> бабушка: </strong></li>#}
+            {#                        </ul>#}
+            {#                        <ul class="plem plem__jus-st ">#}
+            {#                            <li class=" plem__name--wid20">#}
+            {#                                <strong class="strongo "> дедушка: </strong></li>#}
+            {#                        </ul>#}
+            {#                    </li>#}
+            {#                    <li>#}
+            {#                        <ul class="plem plem__jus-st ">#}
+            {#                            <li class="plem__name plem__name--wid20">#}
+            {#                                <strong class="strongo "> {{ otecNomer.matka.linia }}#}
+            {#                                    _{{ otecNomer.matka.nomer }}</strong>#}
+            {#                            </li>#}
+            {#                            <li class="plem__name plem__name--wid20"> линия_номер</li>#}
+            {#                        </ul>#}
+            {#                        <ul class="plem plem__jus-st ">#}
+            {#                            <li class=" plem__name--wid20">#}
+            {#                                <strong class="strongo "> {{ otecNomer.otec.linia }}_{{ otecNomer.otec.nomer }}</strong>#}
+            {#                            </li>#}
+            {#                            <li class=" plem__name--wid20"> линия_номер</li>#}
+            {#                        </ul>#}
+            {#                    </li>#}
+            {#                </ul>#}
+            {#                <ul class="plem plem__jus-st ">#}
+            {#                    <li class="plem__name plem-nomer">{{ otecNomer.oblet }}</li>#}
+            {#                    <li class="plem__name plem__name--wid20"><strong class="strongo strongo--kras"> спаринг </strong>#}
+            {#                    </li>#}
+            {#                </ul>#}
+            {#                <ul class="plem plem__jus-st ">#}
+            {#                    <li class="plem__name plem-nomer">{{ otecNomer.title }}</li>#}
+            {#                    <li class="plem__name plem__name--wid20"><strong class="strongo strongo--kras"> от#}
+            {#                            матковода </strong></li>#}
+
+            {#                </ul>#}
+
+            {#            {% else %}#}
+            {#                <ul class="plem plem__jus-st ">#}
+            {#                    <li class="plem__name plem-nomer">{{ plemmatka.kategoria.name }}_</li>#}
+            {#                    <li class="plem__name plem__name--wid20"> Катеория -- пояснения внизу этой странички</li>#}
+            {#                </ul>#}
+            {#            {% endif %}#}
+
+
+        </div>
+    </div>
+
+
+    <div class=" proekts ">
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Характеристики категорий для регистрации Пчело-Матки&nbsp;
+            </div>
+        </div>
+
+        {% include('app/proekts/pasekas/pchelomatkas/kategoris/_kategor-includ.html.twig') %}
+    </div>
+{% endblock %}

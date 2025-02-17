@@ -1,0 +1,118 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Участник{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/pasekas/uchasties/spisok/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Данные о работе  (Лич. кабин.)
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+
+    <a href="{{ path('app.proekts.pasekas.uchasties.groupas') }}">Группы</a>
+    <a href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">Список </a>
+    <span class="aktiv">Работа участника</span>
+    <a href="javascript:history.back() " class="col-beloe">Вернуться назад. </a>
+{% endblock %}
+
+{% block bodyy %}
+
+    <div class="proekts pro-mesto">
+
+        <div class="wstavka wstavka--uch">
+            <div class="wstavka__title">
+                Участник
+                <span class="st-plem__kras">{{ uchastie.nike }}</span>
+
+            </div>
+        </div>
+
+        <table class=" tabl ma-le-1  ">
+            <tbody  class="li-he col-beloe">
+                <tr  >
+                    <th class="col-beloe" >Имя</th>
+                    <td>{{ uchastie.name.full }}</td>
+                   
+{#					<td>#}
+{#						<a href="{{ path('app.pasekas.uchasties.edit', {'id': uchastie.id}) }}" class="btn btn-primary">Редактировать</a>#}
+{#					</td>#}
+                </tr>
+                 <tr>
+                    <th>Ник</th>
+                    <td>{{ uchastie.nike }}</td>
+					<td>
+{#						<a href="{{ path('app.pasekas.uchasties.edit', {'id': uchastie.id}) }}" class="btn btn-primary">Редактировать</a>#}
+					</td>
+                </tr>
+                 <tr>
+                    <th>Email</th>
+                    <td>{{ uchastie.email.value }}</td>
+					<td>---</td>
+                </tr>
+                <tr>
+                    <th>Group</th>
+                    <td>{{ uchastie.group.name }}</td>
+{#					 <td>#}
+{#						<a href="{{ path('app.pasekas.uchasties.move', {'id': uchastie.id}) }}"#}
+{#						class="btn btn-primary">Перевести в другую группу</a>#}
+{#					</td>#}
+                </tr>
+                <tr>
+                    <th>Дата создания</th>
+                    <td>{{ uchastie.date|date('Y-m-d H:i:s') }}</td>
+                </tr>
+                <tr>
+                     <th>Status</th>
+                    <td>{{ uchastie_status(uchastie.status.name) }}</td>
+					 <td>
+						{% if uchastie.active and uchastie.id.value != app.user.id %}
+							<form action="{{ path('app.pasekas.uchasties.archive', {'id': uchastie.id}) }}" method="post" onsubmit="return confirm('Отправить в архив?')">
+								<input type="hidden" name="token" value="{{ csrf_token('archive') }}" />
+								<button type="submit" class="btn-my btn-danger">Архив</button>
+							</form>
+						{% endif %}
+						{% if uchastie.archived %}
+							<form action="{{ path('app.pasekas.uchasties.reinstate', {'id': uchastie.id}) }}" method="post" onsubmit="return confirm('Are you sure?')">
+								<input type="hidden" name="token" value="{{ csrf_token('reinstate') }}" />
+								<button type="submit" class="btn btn-success">Активизировать</button>
+							</form>
+						{% endif %}
+					</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{#            Это УДАЛЯТЬ НЕЛЬЗЯ!!!!!!          #}
+
+
+{#    {% if departments %}#}
+{#        <div class="box">#}
+{#            <table class="tabl tabl-bordered">#}
+{#                <thead>#}
+{#                <tr>#}
+{#                    <th>ПлемМатка</th>#}
+{#                    <th>Сезон</th>#}
+{#                </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{#                {% for department in departments %}#}
+{#                    <tr>#}
+{#                        <td>#}
+{#                            {{ department.plemmatka_name }}#}
+{#                            #}{#                            <a href="{{ path('app.pasekas.matkas.plemmatkas.show', {'id': department.plemmatka_id}) }}">{{ department.plemmatka_name }}</a>#}
+{#                        </td>#}
+{#                        <td>{{ department.department_name }}</td>#}
+{#                    </tr>#}
+{#                {% endfor %}#}
+{#                </tbody>#}
+{#            </table>#}
+{#        </div>#}
+{#    {% endif %}#}
+
+{% endblock %}

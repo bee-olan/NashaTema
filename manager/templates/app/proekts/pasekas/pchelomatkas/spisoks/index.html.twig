@@ -1,0 +1,134 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Пчело-Матка{% endblock %}
+
+{% block sidebarr %}
+    {% include('app/proekts/pasekas/pchelomatkas/side/_sidefiltr.html.twig') %}
+{% endblock %}
+
+
+{% block menuadapt %}
+    {{ include('app/proekts/page_glavas/pchelomatka/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Инфа: после
+        </div>
+    </div>
+{% endblock %}
+
+    {% block kroxii %}
+        <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Инфа: Все переходы</a>
+        <span class="aktiv ">Список </span>
+        <a href="javascript:history.back() " class="col-beloe">Вернуться назад. </a>
+    {% endblock %}
+
+{% block bodyy %}
+
+    <div class=" proekts pro-pchelomat">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Список Пчело - Маток &nbsp; &nbsp;
+            </div>
+        </div>
+        {# ------------------------- #}
+        <div class="mat-spisok  ">
+            <ul class="mat__zagolov">
+
+                <li class="mat__name-388 mat__name-388--lini">
+                    Пчело-М ( расшифровка )
+                </li>
+
+                {# <li class = "pchelo__name">Кат-рия</li> #}
+                <li class="mat__name-140  mat__name-140--lini ">
+                    Сезоны
+                </li>
+
+                <li class="mat__name-140  mat__name-140--lini ">
+                    Кол-во
+                </li>
+
+                <li class="mat__name-140   mat__name-140--lini "> ДочьПчело</li>
+
+                <li class="mat__name-140   mat__name-140--lini "> Статус</li>
+            </ul>
+            {% for pchelomatka in pagination %}
+
+                <ul class="mat__zagolov  ">
+
+                    <li class="mat__name-388  ">
+                        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.show', {'pchelomatka_id': pchelomatka.id}) }}"
+                           title="Расшифровка названия"> {{ pchelomatka.name }}
+                        </a>
+                    </li>
+
+                    <li class="mat__name-140  ">
+                        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id}) }}"
+                           title="Редактировать, архивировать, добавить новый сезон">
+                            <div class="drevimg "></div>
+                        </a>
+                    </li>
+
+                    <li class="mat__name-140  ">
+                        {{ pchelomatka.pchsezon_count }}
+                    </li>
+
+                    <li class="mat__name-140 ">
+                        {% if pchelomatka.pchsezon_count > 0 %}
+                            <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos.show', {'pchelomatka_id': pchelomatka.id}) }}"
+                               title="Добавить ДочьМаток от этой маточки">
+                                <div class="matimg"></div>
+                            </a>
+                            {#                                ({{ pchelomatka.child_count }})#}
+                        {% else %}
+                            <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id}) }}"
+                               title="Надо добавить рабочие сезоны">
+                                <div class="drevimg "></div>
+                            </a>
+                        {% endif %}
+                    </li>
+
+                    {#                    {% if pchelomatka.linia_o != "-"%}#}
+                    {#                        <li class = "pchelo__name-list " >#}
+                    {#                            <a class="" href="{{ path('app.proekts.pasekas.pchelomatkas.show', {'pchelomatka_id': pchelomatka.id}) }}"  title = "Расшифровка названия" >#}
+                    {#                                {{pchelomatka.linia_o}}  {{pchelomatka.otec_n}}#}
+                    {#                            </a>#}
+                    {#                        </li>#}
+                    {#                    {% else %}#}
+                    {#                        <li class = "pchelo__name-list">  {{ pchelomatka_kategoria(pchelomatka.kategoria) }} </li>#}
+                    {#                    {% endif %}#}
+
+                    <li class="mat__name-140 ">{{ plemmatka_status(pchelomatka.status) }}</li>
+                </ul>
+
+            {% endfor %}
+
+            {# ------------------------- #}
+        </div>
+
+        <div class="containerr">
+
+            <ul class="mat__perexod">
+                <li>
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create') }}"
+                       class="btnn btnn-pchel"> Регистрация <strong class="strongo strongo--kras">ПчелоМатки</strong>
+                    </a>
+                </li>
+                <li> Список
+                    {#                    <a href="{{ path('app.proekts.pasekas.childmatkas'  ) }}" class="btnn btnn--mb0 btnn--col">#}
+                    {#                        Список <strong class="strongo strongo--kras">ДочьМаток (ТестМаток) </strong>#}
+                    {#                    </a>#}
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+{% endblock %}

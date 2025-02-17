@@ -1,0 +1,120 @@
+.mat-shifr {
+  display: flex; // добавляем т.к добаилась li-шка
+  min-width: 10%;
+  color: $text-pchelo;
+  //border-bottom: 1px solid $text-pchelo; // linia
+  padding: .6rem 0 .6rem 5rem;
+
+  @include breakpoint($mobile-bp) {
+
+    padding: .6rem 0 .6rem .8rem;
+  }
+}
+
+.mat-shifr-li  {
+
+  box-shadow: inset 0 0 10px rgba($text-pchelo, 0.9);
+  background: transparent;
+  font-size: 1.2rem;
+  color: $text-pchelo;
+  margin: 10px;
+  padding: .5rem 1.2rem .5rem 1.2rem;
+
+  transition: box-shadow .2s linear;
+
+  //@include breakpoint($mobile-bp) {
+  //  //margin: 10px 0 10px 0;
+  //  padding: .5rem .2rem .5rem .2rem;
+  //}
+
+  &--pchel-col {
+    box-shadow: inset 0 0 10px rgba($pchelo-col, 0.9);
+    color: $pchelo-col;
+  }
+}
+
+.mat-spisok {
+  display: block;
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint($tablet-bp) {
+
+    padding: 0 .1rem 1rem .1rem;
+    overflow: auto;
+  }
+}
+
+.mat-overf {
+  display: block;
+  min-width: 560px;
+  //padding: 0 1rem 1rem 1rem;
+  //margin-bottom: 2rem;
+
+  @include breakpoint($mobile-bp) {
+
+    overflow: auto;
+  }
+}
+
+.mat__zagolov {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; // убрала точку у li
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+
+}
+
+.mat__name-140 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  padding: .6rem ;
+  color: $text-pchelo;
+
+  &--lini {
+    border-bottom: 1px solid $text-pchelo;
+    color: $pchelo-col;
+  }
+}
+
+.mat__name-388 {
+  display: flex;
+  min-width: 388px;
+  padding: .6rem;
+  color: $text-pchelo;
+
+  &--lini {
+    border-bottom: 1px solid $text-pchelo;
+    color: $pchelo-col;
+  }
+}
+
+.mat__perexod{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+
+  @include breakpoint($mobile-bp) {
+    display: block;
+  }
+
+}
+
+.mat-lin {
+  display: block;
+  border-bottom: 1px solid $pchelo-col;
+  border-top: 1px solid $text-pchelo;
+
+}
+
+

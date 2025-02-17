@@ -1,0 +1,64 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Группы{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/pasekas/uchasties/spisok/_inclu-menuadapt.html.twig') }}
+    <div class="main-pro-pro">
+        <div class="storie-teni storie-teni--em2-2 ma-bo-1">
+            Группы
+        </div>
+    </div>
+{% endblock %}
+
+{% block kroxii %}
+    
+    <a href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">Список участников</a>
+    <span class="aktiv">Группы</span>
+    <a href="javascript:history.back()">Вернуться назад</a>
+{% endblock %}
+
+{% block bodyy %}
+
+    <div class="proekts pro-mesto">
+        <div class="wstavka wstavka--uch">
+            <div class="wstavka__title">
+            Группы.
+        </div>
+    </div>
+    <div class="uchasties-grupp">
+
+        <div class="uchasties__left">
+
+            <div class="tabll">
+                <ul class = "uch-tabl__spisok ">
+
+                    <li class = "uch-tabl-li-grupp uch-color uch-tabl__linia">Название </li>
+                    <li class = "uch-tabl-li-grupp--kol uch-color uch-tabl__linia" >Кол-во участ</li>
+                    <li></li>
+                </ul>
+
+                {% for group in groups %}
+
+                    <ul class = "uch-tabl__spisok uch-color-prof">
+
+                        <li class = "uch-tabl-li-grupp">
+                            {% if group.uchasties %}
+                           
+                                 <a  class="uch-tabl__link" href="{{ path('app.proekts.pasekas.uchasties.spisok', {'form': {'group': group.id}}) }}">{{ group.name }}</a>
+                            {% else %}
+                                {{ group.name }}
+                            {% endif %}
+                        </li>
+                        <li class = "uch-tabl-li-grupp--kol uch-tabl__linia"> {{ group.uchasties }}</li>
+
+                    </ul>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

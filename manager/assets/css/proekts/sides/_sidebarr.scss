@@ -1,0 +1,143 @@
+.sidebarr-menu {
+  width: $sidebarr-width;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sidebar;
+  box-shadow: 0 5px 22px rgba(#23282c, .25);
+  overflow: auto;
+
+  @include breakpoint($bp-990) {
+
+    height: calc(100vh - 50px);
+    overflow: auto;
+
+    background: linear-gradient($grad2, $grad1);
+
+    top: 50px;
+
+    transform: translateX(-100%);
+    transition: transform .2s linear;
+
+    .show-sidebar & {
+
+      transform: translateX(0);
+    }
+  }
+  @include breakpoint($bp-768) {
+    display: flex;
+    background: linear-gradient($grad1, $grad2);
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    padding-bottom: 1.5rem;
+
+    transform: translateX(-100%);
+    transition: transform .2s linear;
+
+    .show-sidebar & {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebarr {
+  width: $sidebarr-width;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sidebar;
+  box-shadow: 0 5px 22px rgba(#23282c, .25);
+  overflow: auto;
+
+  @include breakpoint($bp-990) {
+
+    height: calc(100vh - 50px);
+    overflow: auto;
+
+    background: linear-gradient($grad2, $grad1);
+
+    top: 50px;
+
+    transform: translateX(-100%);
+    transition: transform .2s linear;
+
+    .show-sidebar & {
+
+      transform: translateX(0);
+    }
+  }
+  @include breakpoint($bp-768) {
+    display: flex;
+    background: linear-gradient($grad1, $grad2);
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    padding-bottom: 1.5rem;
+
+    transform: translateX(-100%);
+    transition: transform .2s linear;
+
+    .show-sidebar & {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebarr--sezon {
+  width: $sidebarr-width;
+  height: 100vh;
+  background: linear-gradient($grad1, $grad2);
+  // box-shadow: 5px 0 15px rgba(#050505, .1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-sidebar;
+  overflow: auto;
+}
+
+.sidebarr__header {
+  height: 48px;
+  box-shadow: 0 5px 10px rgba($primary-modal, .2);
+
+}
+
+.sidebarr__content-menu {
+  padding: 0 .2rem 0 .6rem; //отступ слева-справа
+
+  @include breakpoint($bp-768) {
+    flex-grow: 1;
+  }
+}
+
+.sidebarr__content {
+  padding: 0 .2rem 0 .6rem; //отступ слева-справа
+
+}
+
+.sidebarr__footer {
+  display: flex;
+  //разделим кнопки и разнесем на слева - справа --  space-between
+  justify-content: center;
+  padding: 0 2rem;
+
+}
+
+.sidebarr__footer-text {
+  // это отступы сверху\снизу для padding и для margin у текста
+  padding: 3rem 0;
+  margin: 3rem 0;
+
+  color: $color-text;
+  font-size: 1.4rem;
+  text-align: center;
+  // это border сверху\снизу у текста
+  border-top: 2px solid $border-lin-nav;
+  border-bottom: 2px solid $border-lin-nav;
+
+  // @include breakpoint($bp-768) {
+  //    display: none;
+  // }
+}
+
+

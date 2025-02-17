@@ -1,0 +1,18 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Участие{% endblock %}
+
+{% block menuadapt %}
+    {{ include('app/proekts/personaa/side/_inclu-person.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.uchastieGl') }}">Инфа: Стать участником</a>
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа:  ПерсонНомер</a>
+    <a href="{{ path('app.proekts.mestos.infa.inform') }}">Инфа: Место рас-ния</a>
+    <span class="aktiv">Инфа раздела: Участие </span>
+{% endblock %}
+
+{% block bodyy %}
+
+{% endblock %}

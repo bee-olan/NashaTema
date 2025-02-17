@@ -1,0 +1,112 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Привер Проект{% endblock %}
+
+
+{% block menuadapt %}
+
+
+        {{ include('app/proekts/pasekas/uchasties/side/_inclu-menuadapt.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа: ПерсонНомер</a>
+    <a href="{{ path('app.proekts.mestos.infa.inform') }}">Инфа: НомерМеста</a>
+    <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee.infa.inform') }}">Инфа: Стать участником</a>
+    <span class="aktiv">Вся Инфа : Участие </span>
+    <a href="javascript:history.back() " class="col-beloe">Вернуться назад. </a>
+{% endblock %}
+
+{% block bodyy %}
+
+    {{ include('app/proekts/pasekas/uchasties/_basepro-stor.html.twig') }}
+
+    <div class="ma-to-2">
+
+        <div class="storie-teni storie-teni--em30 ma-bo-1">
+            Возможность смотреть видео
+        </div>
+        <!-- ================================== -->
+        <div class="base-container">
+            <article class="base-post">
+                <div class="base-post__header">
+                    <div class="base-post__content">
+                        <h2 class="zagol-teni-44  ">
+                            <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
+                                <span class=" zagol-teni-32 ">ПерсонНомер </span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="base-embed">
+                        <iframe width="720" height="405"
+                                src="https://rutube.ru/play/embed/59671f99a834e678a23dd24d3839016a/"
+                                frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen
+                                mozallowfullscreen allowFullScreen>
+
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="base-post__footer ">
+                    <a class="post__read" href="#">оставить комментарий</a>
+                </div>
+            </article><!-- /.post -->
+        </div>
+
+        <div class="base-container">
+            <article class="base-post">
+                <div class="base-post__header">
+                    <div class="base-post__content">
+                        <h2 class="zagol-teni-44  ">
+                            <a href="{{ path('app.proekts.mestos.okrugs') }}">
+                                <span class=" zagol-teni-32 ">НомерМеста </span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="base-embed">
+                        <iframe width="720" height="405"
+                                src="https://rutube.ru/play/embed/81182cfa0c3fa2b14662c9256368efed/"
+                                frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen
+                                mozallowfullscreen allowFullScreen>
+
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="base-post__footer ">
+                    <a class="post__read" href="{{ path('app.proekts.page_glavas.uchastieGl.obsudims.postmesto') }}">НомерМеста
+                        - оставить комментарий</a>
+                </div>
+            </article><!-- /.post -->
+        </div>
+
+
+        <div class="base-container">
+            <article class="base-post">
+                <div class="base-post__header">
+                    <div class="base-post__content">
+                        <h2 class="zagol-teni-44  ">
+                            <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
+                                <span class=" zagol-teni-32 ">Допол. данные или всё </span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="base-embed">
+                        <iframe width="720" height="405"
+                                src="https://rutube.ru/play/embed/088549a660f5802c8426b6a3277b4f71/"
+                                frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen
+                                mozallowfullscreen allowFullScreen>
+
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="base-post__footer ">
+                    <a class="post__read" href="#">оставить комментарий</a>
+                </div>
+            </article><!-- /.post -->
+        </div>
+
+    </div>
+
+{% endblock %}

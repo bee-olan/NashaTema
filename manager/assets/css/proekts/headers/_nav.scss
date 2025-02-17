@@ -1,0 +1,170 @@
+//@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+
+.nav-teni {
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  opacity: 1;
+
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  color: transparent;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 5px #ccb44b,
+
+  0 1px 0 rgba(0, 0, 0, 0.7),
+  0 -1px 0 rgba(0, 0, 0, 0.25),
+  0 .4px 0 rgba(255, 255, 255, 1),
+  0 .5px .8px rgba(255, 255, 255, 0.2);
+
+  &--em4 {
+    font-size: 3.750em;
+  }
+
+  &--em28 {
+    font-size: 2.875rem;
+  }
+
+  //@include breakpoint($tablet-bp) {
+  //  font-size: 3.25em;
+  //
+  //  text-shadow: 0 1px 5px #ccb44b ,
+  //      0 -.5px 0 rgba(0,0,0,1),
+  //      0 -1.5px 0 rgba(0,0,0,0.25),
+  //
+  //      0 .5px 0 rgba(255,255,255,0.5),
+  //      0 1px 1px rgba(255,255,255,0.2);
+  //
+  //   &--em4{
+  //     font-size: 2.250em;
+  //
+  //   }
+  //
+  //
+  //  }
+}
+
+.nav {
+
+  &--mobile {
+    display: none;
+    margin: 3rem  1rem 2rem 0 ;
+   }
+
+   @include breakpoint($bp-990) {
+    margin-left: 4rem;
+  }
+
+  @include breakpoint($bp-768) {
+    
+    display: none;
+     margin-left: 0;
+    &--mobile {
+     display: block;
+
+    }
+  }
+
+
+
+  // @include breakpoint($mobile-bp) {
+  //     display: none;
+  //     //
+  //     //&--mobile {
+  //     //   display: none;
+  //     //}
+  // }
+
+}
+
+.nav__list {
+  display: flex;
+
+  @include breakpoint($bp-768) {
+     flex-direction: column; // что бы навигация шла друг под другом
+  
+  }
+}
+
+.nav__item {
+  position: relative; // позиционирование для
+  //color: $grad1;
+
+  &:hover {
+    .nav__link {
+      background-color: rgba($header-color, .6);
+
+      text-decoration: none;
+      color: $grad1;
+    }
+
+    > .subnav {
+      display: block;
+    }
+  }
+
+  @include breakpoint($bp-768) {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+
+    border-top: 2px solid $border-lin-nav;
+
+     &:hover {
+         .nav__link {
+             background: none;
+         }
+     }
+  }
+}
+
+// стилизация ссылок
+.nav__link {
+  display: block; // ссылки - блочные
+  padding: 0 .7rem 0 1rem;
+  text-decoration: none;
+  transition: background-color .2s linear;
+
+
+  // стрелочка - имеет под  навигацию
+  &.has-subnav {
+    position: relative;
+    padding-right: 2.3rem;
+
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 2px;
+
+      border-style: solid;
+      border-width: 9px 5px 0 5px;
+      border-color: $lini-prof transparent transparent transparent;
+
+      position: absolute;
+      top: 50%;
+      right: 1.35rem;
+      transform: translateY(-50%); //по центру по вертикали
+    }
+
+    @include breakpoint($bp-768) {
+      padding-right: 11rem;
+    }
+  }
+
+   @include breakpoint($bp-768) {
+      //padding-left: 0;
+      //padding-right: 0;
+
+      font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
