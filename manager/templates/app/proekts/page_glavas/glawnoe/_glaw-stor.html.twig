@@ -18,7 +18,14 @@
                         <span class=" storie-teni storie-teni--em30 "> Участие </span>
                     </a>
                 </div>
-                <time class="stories__date storie-teni storie-teni--em2 ">Шаг - 1</time>
+                <time class="stories__date storie-teni storie-teni--em2 ">
+                    {% if persona and uchastie and mestoNomer  %}
+                          Вы - участник
+                    {% else %}
+                        Шаг - 1
+                    {% endif %}
+
+                </time>
             </div>
 
             <div class="stories__item">
