@@ -134,5 +134,6 @@ services:
 
 volumes:
     manager-postgres:
+    manager-pgadmin:
     manager-redis:
     manager-queue-redis:
