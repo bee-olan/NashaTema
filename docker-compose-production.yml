@@ -93,14 +93,14 @@ services:
             POSTGRES_PASSWORD: ${MANAGER_DB_PASSWORD}
             POSTGRES_DB: app
     #---------------------------------
-    manager-pgadmin:
-        image: dpage/pgadmin4
-        container_name: pgadmin-container
-        environment:
-            PGADMIN_DEFAULT_PASSWORD: admin
-            PGADMIN_DEFAULT_EMAIL: admin@test.com
-        ports:
-            - "105:80"
+#    manager-pgadmin:
+#        image: dpage/pgadmin4
+#        container_name: pgadmin-container
+#        environment:
+#            PGADMIN_DEFAULT_PASSWORD: admin
+#            PGADMIN_DEFAULT_EMAIL: admin@test.com
+#        ports:
+#            - "105:80"
 
     #---------------------------
     manager-redis:
@@ -134,6 +134,6 @@ services:
 
 volumes:
     manager-postgres:
-    manager-pgadmin:
+#    manager-pgadmin:
     manager-redis:
     manager-queue-redis:
