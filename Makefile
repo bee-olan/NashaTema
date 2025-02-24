@@ -22,7 +22,7 @@ docker-pull:
 docker-build:
 	docker compose build --pull
 	
-manager-init: manager-composer-install manager-assets-install manager-oauth-keys manager-wait-db manager-migrations  manager-fixtures manager-ready
+manager-init: manager-composer-install manager-assets-install manager-oauth-keys manager-wait-db manager-migrations   manager-ready
 # manager-fixtures
 manager-clear:
 	docker run --rm -v ${PWD}/manager:/app --workdir=/app alpine rm -f .ready
