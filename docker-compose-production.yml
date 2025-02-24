@@ -84,6 +84,7 @@ services:
         command: sh -c "sleep 30 && php bin/console messenger:consume async -vv"
     manager-postgres:
         image: ${REGISTRY_ADDRESS}/manager-postgres:${IMAGE_TAG}
+        container_name: my-postgres-container
         restart: always
         volumes:
             - manager-postgres:/var/lib/postgresql/data
@@ -91,6 +92,17 @@ services:
             POSTGRES_USER: app
             POSTGRES_PASSWORD: ${MANAGER_DB_PASSWORD}
             POSTGRES_DB: app
+    #---------------------------------
+    manager-pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin-container
+        environment:
+            PGADMIN_DEFAULT_PASSWORD: admin
+            PGADMIN_DEFAULT_EMAIL: admin@test.com
+        ports:
+            - "105:80"
+
+    #---------------------------
     manager-redis:
         image: redis:5.0-alpine
         restart: always
