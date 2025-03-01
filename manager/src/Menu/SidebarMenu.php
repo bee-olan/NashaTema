@@ -127,6 +127,21 @@ class SidebarMenu
         }
 
         if ($this->auth->isGranted('ROLE_ADMINKA_MANAGE_UCHASTIES')) {
+
+
+            $menu->addChild('Группы', ['route' => 'adminka.uchasties.groups'])
+                ->setExtra('icon', 'nav-icon icon-people')
+                ->setExtra(
+                    'routes',
+                    [
+                        ['route' => 'adminka.uchasties.groups'],
+                        ['pattern' => '/^adminka\.uchasties.groups\..+/']
+                    ]
+                )
+                ->setAttribute('class', 'nav-item')
+                ->setLinkAttribute('class', 'nav-link');
+
+
             $menu->addChild('Участники!', ['route' => 'adminka.uchasties'])
                 ->setExtra('icon', 'nav-icon icon-people')
                 ->setExtra(

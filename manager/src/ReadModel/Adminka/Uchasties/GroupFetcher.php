@@ -31,6 +31,14 @@ class GroupFetcher
             return $stmt->fetchAll(\PDO::FETCH_KEY_PAIR);
     }
 
+    public function exists(): bool
+    {
+        return $this->connection->createQueryBuilder()
+                ->select('COUNT (id)')
+                ->from('admin_uchasties_groups')
+                ->execute()->fetchColumn() > 0;
+    }
+
     public function all(): array
     {
         $stmt = $this->connection->createQueryBuilder()

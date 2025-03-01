@@ -61,7 +61,7 @@ class UchastiesController extends AbstractController
             $request->query->get('sort', 'nike'),
             $request->query->get('direction', 'asc')
         );
-//dd($pagination);
+
         return $this->render('app/adminka/uchasties/index.html.twig', [
             'pagination' => $pagination,
             'form' => $form->createView(),

@@ -40,8 +40,13 @@ class GroupsController extends AbstractController
      */
     public function index(GroupFetcher $fetcher): Response
     {
+        if (!$fetcher->exists()) {
+            $this->addFlash('error', 'Групп - нет, создать .');
+            return $this->redirectToRoute('adminka.uchasties.groups.create');
+        }
+
         $groups = $fetcher->all();
-//dd($groups);
+
         return $this->render('app/adminka/uchasties/groups/index.html.twig', compact('groups'));
     }
 
