@@ -22,12 +22,12 @@ jobs:
         steps:
             -   uses: actions/checkout@v4
 
-#            -   name: Cache Frontend modules
-#                uses: actions/cache@v2
-#                with:
-#                    path: manager/node_modules
-#                    key: yarn-${{ hashFiles('manager/yarn.lock') }}
-#
+            -   name: Cache Frontend modules
+                uses: actions/cache@v2
+                with:
+                    path: manager/node_modules
+                    key: yarn-${{ hashFiles('manager/yarn.lock') }}
+
 #            -   name: Cache API modules
 #                uses: actions/cache@v2
 #                with:
